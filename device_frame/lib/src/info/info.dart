@@ -12,7 +12,7 @@ import 'identifier.dart';
 part 'info.freezed.dart';
 
 /// Info about a device and its frame.
-@freezed
+// @freezed
 abstract class DeviceInfo with _$DeviceInfo {
   /// Create a new device info.
   const factory DeviceInfo({

@@ -25,8 +25,7 @@ class DeviceFrameTheme extends InheritedWidget {
   /// The data from the closest instance of this class that encloses the given
   /// [context].
   static DeviceFrameStyle of(BuildContext context) {
-    final widget =
-        context.dependOnInheritedWidgetOfExactType<DeviceFrameTheme>();
+    final widget = context.dependOnInheritedWidgetOfExactType<DeviceFrameTheme>();
 
     return widget?.style ?? DeviceFrameStyle.dark();
   }
@@ -42,7 +41,7 @@ class DeviceFrameTheme extends InheritedWidget {
 /// See also:
 ///
 /// * [DeviceKeyboardStyle] to customize the virtual on screen keyboard.
-@freezed
+// @freezed
 abstract class DeviceFrameStyle with _$DeviceFrameStyle {
   /// Create a [DeviceFrameStyle] with the given [keyboardStyle].
   const factory DeviceFrameStyle({
@@ -50,14 +49,13 @@ abstract class DeviceFrameStyle with _$DeviceFrameStyle {
   }) = _DeviceFrameStyle;
 
   /// A default dark theme.
-  factory DeviceFrameStyle.dark({DeviceKeyboardStyle? keyboardStyle}) =>
-      DeviceFrameStyle(
+  factory DeviceFrameStyle.dark({DeviceKeyboardStyle? keyboardStyle}) => DeviceFrameStyle(
         keyboardStyle: keyboardStyle ?? DeviceKeyboardStyle.dark(),
       );
 }
 
 /// The keyboard style allows to customize the virtual onscreen keyboard visuals.
-@freezed
+// @freezed
 abstract class DeviceKeyboardStyle with _$DeviceKeyboardStyle {
   /// Creates a new style for the virtual keyboard.
   const factory DeviceKeyboardStyle({
